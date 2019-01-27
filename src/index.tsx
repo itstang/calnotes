@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { setGlobal } from 'reactn';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+setGlobal({
+  markdownInput: '',
+});
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
