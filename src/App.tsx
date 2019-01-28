@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Editor } from './components/editor';
+import { Editor } from 'src/components/editor';
 import logo from './logo.svg';
 import './App.scss';
 
