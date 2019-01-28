@@ -1,0 +1,29 @@
+$spacings: 5;
+$directions: "y",
+"x",
+"t",
+"b",
+"r",
+"l";
+
+@each $direction in $directions {
+  @for $i from 1 through $spacings {
+    .p#{$direction}-#{$i} {
+      @if ($direction=="y") or ($direction=="t") {
+        padding-top: #{$i}rem;
+      }
+
+      @if ($direction=="y") or ($direction=="b") {
+        padding-bottom: #{$i}rem;
+      }
+
+      @if ($direction=="x") or ($direction=="r") {
+        padding-right: #{$i}rem;
+      }
+
+      @if ($direction=="x") or ($direction=="l") {
+        padding-left: #{$i}rem;
+      }
+    }
+  }
+}
