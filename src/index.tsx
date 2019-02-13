@@ -1,9 +1,9 @@
-import React, { setGlobal } from 'reactn';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import 'normalize.css';
+import ReactDOM from 'react-dom';
+import React, { setGlobal } from 'reactn';
+import App from './App';
+import './index.scss';
+import * as serviceWorker from './serviceWorker';
 
 setGlobal({
   markdownInput: '',

@@ -11,7 +11,7 @@ type Props = PublicProps;
 export class Button extends Component<Props> {
   public render() {
     return (
-      <button className='btn' onClick={this.props.onClick}>
+      <button className="btn" onClick={this.props.onClick}>
         {this.props.children}
       </button>
     );

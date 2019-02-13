@@ -1,14 +1,9 @@
 import React, { Component } from 'reactn';
-import { Button, Layout } from 'src/core';
 import { MarkdownView } from 'src/components/markdown';
 import { TextArea } from 'src/components/markdown/textarea';
 import { Sidebar } from 'src/components/sidebar';
-import {
-  Display,
-  FlexDirection,
-  JustifyContent,
-  Position,
-} from 'src/core/layout/models';
+import { Button, Layout } from 'src/core';
+import { Display, FlexDirection, JustifyContent, Position } from 'src/core/layout/models';
 import './style.scss';
 
 interface PublicProps {}
@@ -28,7 +23,7 @@ export class Editor extends Component<Props, State> {
   }
 
   public render() {
-    let buttonState = this.state.showPreview ? '>' : '<';
+    const buttonState = this.state.showPreview ? '>' : '<';
     return (
       <Layout
         margin={{ x: 1, y: 1 }}
@@ -39,13 +34,8 @@ export class Editor extends Component<Props, State> {
       >
         <Sidebar />
         <TextArea />
-        {this.state.showPreview && (
-          <MarkdownView text={this.global.markdownInput} />
-        )}
-        <Layout
-          className='mkdn-preview__close-btn'
-          position={Position.Absolute}
-        >
+        {this.state.showPreview && <MarkdownView text={this.global.markdownInput} />}
+        <Layout className="mkdn-preview__close-btn" position={Position.Absolute}>
           <Button onClick={this.handleClick}>{buttonState}</Button>
         </Layout>
       </Layout>
@@ -56,6 +46,5 @@ export class Editor extends Component<Props, State> {
     this.setState(prevState => ({
       showPreview: !prevState.showPreview,
     }));
-    console.log(this.state);
   };
 }

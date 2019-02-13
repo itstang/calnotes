@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
 import classNames from 'classnames';
-import './style.scss';
+import React, { Component } from 'react';
 import {
+  AlignContent,
+  AlignItems,
   Display,
   FlexDirection,
   FlexWrap,
   JustifyContent,
-  AlignItems,
-  AlignContent,
   Position,
 } from './models';
+import './style.scss';
 
 interface PublicProps {
   className?: string;
@@ -59,7 +59,9 @@ export class Layout extends Component<Props> {
   private getPadding() {
     const classes = [];
     for (const key in this.props.padding) {
-      classes.push(`p${key}-${this.props.padding[key.toString()]}`);
+      if (this.props.hasOwnProperty(key)) {
+        classes.push(`p${key}-${this.props.padding[key.toString()]}`);
+      }
     }
     return classes;
   }
@@ -67,7 +69,9 @@ export class Layout extends Component<Props> {
   private getMargin() {
     const classes = [];
     for (const key in this.props.margin) {
-      classes.push(`m${key}-${this.props.margin[key.toString()]}`);
+      if (this.props.hasOwnProperty(key)) {
+        classes.push(`m${key}-${this.props.margin[key.toString()]}`);
+      }
     }
     return classes;
   }

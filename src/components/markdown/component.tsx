@@ -23,7 +23,7 @@ export class MarkdownView extends Component<Props, {}> {
 
   public render() {
     return (
-      <Layout className='mkdn-preview' padding={{ x: 1 }}>
+      <Layout className="mkdn-preview" padding={{ x: 1 }}>
         <Markdown markup={this.props.text} />
       </Layout>
     );

@@ -5,7 +5,7 @@ export class TextArea extends Component {
   public render() {
     return (
       <textarea
-        className='mkdn-textarea'
+        className="mkdn-textarea"
         value={this.global.markdownInput}
         onChange={this.handleChange}
         autoFocus
