@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import { Markdown } from "react-showdown";
+import React, { Component } from 'react';
+import { Markdown } from 'react-showdown';
+import { Layout } from 'src/core';
+import './style.scss';
 
 interface PublicProps {
   text: string;
@@ -20,6 +22,10 @@ export class MarkdownView extends Component<Props, {}> {
   // };
 
   public render() {
-    return <Markdown markup={this.props.text} />;
+    return (
+      <Layout className='mkdn-preview' padding={{ x: 1 }}>
+        <Markdown markup={this.props.text} />
+      </Layout>
+    );
   }
 }

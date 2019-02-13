@@ -1,0 +1,15 @@
+.btn {
+  background-color: rgb(41, 55, 83);
+  display: block;
+  line-height: 0;
+  height: 2rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: #fff;
+
+  &:hover {
+    background-color: rgb(70, 93, 139);
+    cursor: pointer;
+  }
+}
